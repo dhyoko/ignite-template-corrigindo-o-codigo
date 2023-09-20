@@ -59,8 +59,8 @@ app.delete(
   (request, response) => {
     const { repository } = request;
 
-    repositories.splice(repository, 1);
-
+    repositories.splice(repositories.indexOf(repository), 1);
+    
     return response.status(204).send();
   }
 );
